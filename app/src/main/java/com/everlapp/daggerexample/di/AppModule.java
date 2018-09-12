@@ -10,6 +10,10 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 
+
+/**
+ * This is where you will inject application-wide dependencies.
+ */
 @Module
 public class AppModule {
 

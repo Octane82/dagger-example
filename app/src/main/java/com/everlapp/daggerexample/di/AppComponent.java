@@ -11,9 +11,11 @@ import dagger.android.support.AndroidSupportInjectionModule;
 
 @Singleton
 @Component(modules = {
+        /* Use AndroidInjectionModule.class if you're not using support library */
         AndroidSupportInjectionModule.class,
         AppModule.class,
         BuildersModule.class
+        // NetworkModule, UtilsModule e.t.c
 })
 public interface AppComponent {
     @Component.Builder
@@ -25,5 +27,7 @@ public interface AppComponent {
     }
 
     void inject(App app);
+
+    // inject() - Services, Presenters e.t.c
 
 }
